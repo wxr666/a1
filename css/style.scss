@@ -1,0 +1,81 @@
+/*
+* @Author: Marte
+* @Date:   2017-04-11 13:31:10
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-04-12 09:26:08
+*/
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-decoration:none;
+    box-sizing:border-box;
+}
+html,body{
+    width:100%;
+    height:100%;
+    -webkit-user-select:none;
+    user-select:none;
+}
+
+button{
+    @if 1+1!=3{
+    width:1200px;
+    height:100px;
+    background:red;
+    display:block;
+    border:none;
+    outline:none;
+    }
+    @else{
+    width:1200px;
+    height:200px;
+    background:blue;
+    display:block;
+}
+}
+
+//@for $i from 1 through 5{ //$i:1 2 3 4 5
+   // .box#{$i}{
+   // width:200px;
+    //height:200px;
+    //background:pink;
+    //float:left;
+    //margin-right:15px;
+    //}
+//}
+
+$s:6;
+@while $s>0{// 6 4 2
+.box#{$s}{
+    width:200px;
+    height:200px;
+    background:skyblue;
+    border:1px solid #ccc;
+    float:left;
+    text-align:center;
+}
+$s:$s - 2;
+}
+//$s:5;
+//@while $s>0{// 5 3 1
+//.box#{$s}{
+   // width:200px;
+    //height:200px;
+    //background:yellow;
+   // border:1px solid #ccc;
+   // float:left;
+  //  text-align:center;
+//}
+//$s:$s - 2;
+//}
+
+//$list:header nav section footer;
+//@each $a in $list{
+   #{$a}{
+   //width:300px;
+   //height:300px;
+   //border:1px solid #ccc;
+   //float:left;
+    //   }
+//}
